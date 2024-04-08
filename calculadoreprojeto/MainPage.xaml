@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="calculadoreprojeto.MainPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="estilo comum" TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="FontSize" Value="40"/>
+                <Setter Property="TextColor" Value="Black"/>
+            </Style>
+            <Style x:Key="BotaoClaro" TargetType="Button" BasedOn="{StaticResource estilo comum}">
+                <Setter Property="BackgroundColor" Value="#ddd"/>
+            </Style>
+            <Style x:Key="BotaoLaranja" TargetType="Button" BasedOn="{StaticResource estilo comum}">
+                <Setter Property="BackgroundColor" Value="#e8ad00"/>
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <Grid RowDefinitions=" 150,*,*,*,*,*,*" RowSpacing="10" ColumnSpacing="10" Margin="10"
+           ColumnDefinitions="*,*,*,*">
+            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" x:Name="visor" Text="0" HorizontalTextAlignment="End"
+                   VerticalTextAlignment="End" TextColor="White" FontSize="60"/>
+            <Button Grid.Row="1" Grid.Column="0" Style="{StaticResource Botaoescuro}" x:Name="Zerar"
+                    Text="c" Clicked="Zerar_Clicked" />
+            <Button Grid.Row="1" Grid.Column="1" Style="{StaticResource Botaoescuro}" x:Name="Maismenos"
+                    Text="+/-" Clicked="Maismenos_Clicked" />
+            <Button Grid.Row="1" Grid.Column="2" Style="{StaticResource Botaoescuro}" x:Name="porcento"
+                    Text="%" Clicked="porcento_Clicked"  />
+            <Button Grid.Row="1" Grid.Column="3" Style="{StaticResource Botaolaranja}" x:Name="dividir"
+                    Text="/" Clicked="dividir_Clicked" />
+
+
+            <Button Grid.Row="2" Grid.Column="0" Style="{StaticResource Botaoclaro}" x:Name="num7"
+                    Text="7" Clicked="num7_Clicked" />
+            <Button Grid.Row="2" Grid.Column="1" Style="{StaticResource Botaoclaro}" x:Name="num8"
+                    Text="8" Clicked="num8_Clicked" />
+            <Button Grid.Row="2" Grid.Column="2" Style="{StaticResource Botaoclaro}" x:Name="num9"
+                    Text="9" Clicked="num9_Clicked" />
+            <Button Grid.Row="2" Grid.Column="3" Style="{StaticResource Botaoelaranja}" x:Name="multiplicacao"
+                    Text="multiplicacao" Clicked="multiplicacao_Clicked" />
+
+
+            <Button Grid.Row="3" Grid.Column="0" Style="{StaticResource Botaoclaro}" x:Name="num4"
+                    Text="4" Clicked="num4_Clicked" />
+            <Button Grid.Row="3" Grid.Column="1" Style="{StaticResource Botaoclaro}" x:Name="num5"
+                    Text="5" Clicked="num5_Clicked"  />
+            <Button Grid.Row="3" Grid.Column="2" Style="{StaticResource Botaoclaro}" x:Name="num6"
+                    Text="6" Clicked="num6_Clicked"  />
+            <Button Grid.Row="3" Grid.Column="3" Style="{StaticResource Botaolaranja}" x:Name="menos"
+                    Text="-" Clicked="menos_Clicked" />
+
+
+            <Button Grid.Row="4" Grid.Column="0" Style="{StaticResource Botaoescuro}" x:Name="num1"
+                    Text="1" Clicked="num1_Clicked" />
+            <Button Grid.Row="4" Grid.Column="1" Style="{StaticResource Botaoclaro}" x:Name="num2"
+                    Text="2" Clicked="num2_Clicked" />
+            <Button Grid.Row="4" Grid.Column="2" Style="{StaticResource Botaoclaro}" x:Name="num3"
+                    Text="3" Clicked="num3_Clicked" />
+            <Button Grid.Row="4" Grid.Column="3" Style="{StaticResource Botaoelaranja}" x:Name="mais"
+                    Text="+" Clicked="mais_Clicked" />
+
+
+            <Button Grid.Row="5"  Grid.ColumnSpan="2" Style="{StaticResource Botaoeclaro}" x:Name="num0"
+                    Text="0" Clicked="num0_Clicked" />
+            <Button Grid.Row="5"  Grid.ColumnSpan="2" Style="{StaticResource Botaoescuro}" x:Name="."
+                    Text="ponto" Clicked="__Clicked" />
+            <Button Grid.Row="5"  Grid.ColumnSpan="3" Style="{StaticResource Botaoescuro}" x:Name="resultado"
+                    Text="resultado" Clicked="resultado_Clicked" />
+
+
+        </Grid>
+
+
+
+
+    </ContentPage.Content>
+</ContentPage>
